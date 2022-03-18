@@ -37,45 +37,65 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return (counteer % 2 == 0)
-        ? Row(
-            children: [
-              Column(
-                children: [
-                  SingleChildScrollView(
-                      child: Container(
-                    height: 800,
-                    width: 190,
-                    color: Colors.blue,
-                  ))
-                ],
+        ? MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: Scaffold(
+              appBar: AppBar(
+                backgroundColor: Colors.deepPurple,
+                title: const Text("Shake The Phone To Swap the Colours"),
               ),
-              SingleChildScrollView(
-                  child: Container(
-                height: 1000,
-                width: 190,
-                color: Colors.red,
-              ))
-            ],
+              body: Padding(
+                padding: const EdgeInsets.all(35.0),
+                child: SizedBox(
+                  height: 700,
+                  width: 300,
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 350,
+                        width: 150,
+                        color: Colors.red,
+                      ),
+                      Container(
+                        height: 350,
+                        width: 150,
+                        color: Colors.blue,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
           )
-        : Row(
-            children: [
-              Column(
-                children: [
-                  SingleChildScrollView(
-                      child: Container(
-                    height: double.infinity,
-                    width: double.infinity / 2,
-                    color: Colors.red,
-                  ))
-                ],
+        : MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: Scaffold(
+              appBar: AppBar(
+                backgroundColor: Colors.deepPurple,
+                title: const Text("Shake The Phone To Swap the Colours"),
               ),
-              SingleChildScrollView(
-                  child: Container(
-                height: double.infinity,
-                width: double.infinity / 2,
-                color: Colors.blue,
-              ))
-            ],
+              body: Padding(
+                padding: const EdgeInsets.all(35.0),
+                child: SizedBox(
+                  height: 700,
+                  width: 300,
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 350,
+                        width: 150,
+                        color: Colors.blue,
+                      ),
+                      Container(
+                        height: 350,
+                        width: 150,
+                        color: Colors.red,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
           );
   }
 }
